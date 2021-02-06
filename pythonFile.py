@@ -1,28 +1,17 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-# initial point
-x0 = 2
-x  = np.linspace(1,2.5,100)
+# i am a comment, i am not importante!
 
-def f(x):
-    return 2 * x**2 / ( 1 + x**2 )
+this is a/an :
+    number 3.1415
+    string 'str'
+    function: 
+                def f(x):
+                    return x+x**2
+    variable a = 2
 
-
-y = x
-plt.plot(x, y,    color='blue')
-plt.plot(x, f(x), color='red')
-
-xn = [x0]
-for i in range(100):
-    xn.append( f(xn[i]) )
-
-for i in range(100):
-    if (xn[0] > 3):
-        break
-    plt.plot( [xn[i], xn[i]],   [xn[i], xn[i+1]]   ,color='black' )
-    plt.plot( [xn[i+1], xn[i]], [xn[i+1], xn[i+1]] ,color='black' )
-
-
-plt.axis('square')
-plt.show()
+# control and loop
+for i in range(n):
+    if ( i%2 == 0 ):
+        print(i)
