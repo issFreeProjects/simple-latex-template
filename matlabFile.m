@@ -7,7 +7,7 @@ this is a/an :
 	variable ans = chert;
 	comment %% comemnt here
 
-% control and loop:
+% Loops and Control Statements
 if x>1
 	fprintf( 'x=%d is too big!', x )
 end
