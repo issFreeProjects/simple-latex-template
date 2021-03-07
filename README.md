@@ -4,10 +4,10 @@ i actually use it to deliver some homeworks
 ## how to use
 
 ### question environment
-    follow template.tex example, write your content inside \begin{qu} and \end{qu}
+follow template.tex example, write your content inside \begin{qu} and \end{qu}
 
 ### change title
-    title and subtitle are in ```requirements/configs.tex```
+title and subtitle are in ```requirements/configs.tex```
 
 ## how to compile:
 first install ```xelatex``` compiler
