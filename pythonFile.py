@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # i am a comment, i am not importante!
-
 this is a/an :
     number 3.1415
     string 'str'
@@ -11,7 +10,8 @@ this is a/an :
                     return x+x**2
     variable a = 2
 
-# control and loop
+# Loops and Control Statements
 for i in range(n):
     if ( i%2 == 0 ):
         print(i)
+    else: return
