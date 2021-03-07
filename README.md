@@ -1,12 +1,11 @@
 # This is my simple latex template 
-i actually use it to deliver some homeworks
+I actually use it to deliver some Homeworks
 
 ## how to use
+#### question environment
+follow template.tex example, write your content inside ```\begin{qu} {content} \end{qu}```
 
-### question environment
-follow template.tex example, write your content inside \begin{qu} and \end{qu}
-
-### change title
+#### change title
 title and subtitle are in ```requirements/configs.tex```
 
 ## how to compile:
