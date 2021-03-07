@@ -1,7 +1,15 @@
 # This is my simple latex template 
 i actually use it to deliver some homeworks
 
-## how to use:
+## how to use
+
+### question environment
+    follow template.tex example, write your content inside \begin{qu} and \end{qu}
+
+### change title
+    title and subtitle are in ```requirements/configs.tex```
+
+## how to compile:
 first install ```xelatex``` compiler
 then run:
 ```sh
