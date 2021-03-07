@@ -1,88 +1,39 @@
-%%%%%%%%%%%%%%%%% compile it by : `xelatex template.tex` %%%%%%%%%%%%%%%%%
-\documentclass[a4paper,11pt]{article}                                   %% document type
-\usepackage[usenames,dvipsnames]{color,xcolor}                          %% color will use in matlab code env
-\usepackage{listings}                                                   %% for code blocks
-\usepackage{hyperref}                                                   %%
-\usepackage{babel}                                                      %%
-\usepackage{tabularx,lipsum,environ,amsmath,amssymb}                    %% math typing
-\usepackage{graphicx,caption,subcaption}                                %% for using picture and setting it's caption
-\usepackage{inputenc, environ}                                          %% code env
-\usepackage[margin={0.8in,0.8in}]{geometry}                             %% page margin
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% xepersian package and setting it's font
-\usepackage{xepersian}                                                  %%
-\settextfont{Yas}                                                       %%
-\setdigitfont{Yas}                                                      %%
-\setlatintextfont{C059}                                                 %%
-\linespread{1.5}                                                        %% setting distance between lines = 1.5
-\newcommand{\Hquad}{\hspace{0.5em}}                                     %% half quad 
-\defpersianfont\mybold[Scale=1.2]{B Yas}                                %% bold font
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% for matlab codes
-\definecolor{listinggray}{gray}{.92}
-\lstset{% general command to set parameter(s)
-language=Matlab,
-backgroundcolor=\color{listinggray},
-basicstyle=\ttfamily, % print whole listing small
-keywordstyle=\color{blue}\bfseries,
-stringstyle=\ttfamily\color{red}, % typewriter type for strings
-commentstyle=\color{Green},
-basicstyle=\linespread{.99}\ttfamily\scriptsize,
-captionpos=b,
-breaklines=true,
-frame=single,
-xleftmargin=10pt,
-showstringspaces=true}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% for question environment
-\NewEnviron{qu}{
-    \begin{itemize}
-        \refstepcounter{quc}
-        \item[ \fbox{سؤال \thequc} ] \BODY
-    \end{itemize}
-}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% title and author
-\title{تمرین سری $\infty$}
-\author{ نام نویسنده }
-\date{\vspace{-5ex}}
-\newcounter{quc}
+\input{requirements/packages}
+\input{requirements/configs}
 
 \begin{document}
 \maketitle
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% sample question 1
 \begin{qu}
+
+
 \begin{itemize}
+    \item[(الف)]
+    این یک معادله $\text{inline}$ است:
+    $\langle v^T,v\rangle =\sum_{i=1}^{n} v_i^2$
+    \\
+    این معادله در یک خط جدا است:
+    $$ \int_a^b f(x) dx = \sum_{i=0}^{n-1} \int_{t_i}^{t_{i+1}} f(x) dx $$
+    این یک محیط $\text{align}$ است:
+    \begin{align}
+        \int_a^b f(x) dx &= \sum_{i=0}^{n-1} \int_{t_i}^{t_{i+1}} f(x) dx \\
+                         &= \sum_{i=0}^{n-1} \int_{t_i}^{t_{i+1}} f(x_i) dx \notag \\
+                         &= \sum_{i=0}^{n-1} x_i(t_{i+1}-t_i) \tag{\text{از تعریف}}
+    \end{align}
+    
+    \item[(ب)]
+        این یک کد متلب آزمایشی است:
+        %%%%%%%%%%%%%%%%%%%%%%%%%% sample matlab code
+        \begin{latin}
+            \lstinputlisting[language=Matlab]{matlabFile.m}
+        \end{latin}
+    
+    \item[(ج)]
+        این یک کد پایتون آزمایشی است:
+        \begin{latin}
+            \lstinputlisting[language=Python]{pythonFile.py}
+        \end{latin}
+    
+    \end{itemize}
+    \end{qu}
 
-\item[(الف)] این جواب قسمت ‍‍‍‍‍‍(الف)  است؛ \\
-این یک معادله $\text{inline}$ است:
-$\langle v^T,v\rangle =\sum_{i=1}^{n} v_i^2$
-\\
-این معادله در یک خط جدا است:
-$$ \int_a^b f(x) dx = \sum_{i=0}^{n-1} \int_{t_i}^{t_{i+1}} f(x) dx $$
-این یک محیط $\text{align}$ است:
-\begin{align}
-    \int_a^b f(x) dx &= \sum_{i=0}^{n-1} \int_{t_i}^{t_{i+1}} f(x) dx \\
-                     &= \sum_{i=0}^{n-1} \int_{t_i}^{t_{i+1}} f(x_i) dx \notag \\
-                     &= \sum_{i=0}^{n-1} x_i(t_{i+1}-t_i) \tag{\text{از تعریف}}
-\end{align}
-
-\item[(ب)]
-    این یک کد متلب آزمایشی است:
-    %%%%%%%%%%%%%%%%%%%%%%%%%% sample matlab code
-    \begin{latin}
-        \lstinputlisting[language=Matlab]{matlabFile.m}
-    \end{latin}
-
-\item[(ج)]
-    این یک کد پایتون آزمایشی است:
-    \begin{latin}
-        \lstinputlisting[language=Python]{pythonFile.py}
-    \end{latin}
-
-\end{itemize}
-\end{qu}
 \end{document}
-
-
-%    \begin{latin}
-%        \lstinputlisting[language=Matlab]{matlabfile.m}
-%    \end{latin}
