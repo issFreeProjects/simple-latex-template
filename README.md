@@ -1,7 +1,6 @@
 # This is my simple latex template 
 I actually use it to deliver some Homeworks
 
----
 ## how to use
 #### question environment:
 follow template.tex example, write your content inside `\begin{qu} {content} \end{qu}`
