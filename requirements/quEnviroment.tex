@@ -1,0 +1,21 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% configs for code env
+\definecolor{listinggray}{gray}{.92}
+\lstset{% general command to set parameter(s)
+backgroundcolor=\color{listinggray},
+basicstyle=\ttfamily, % print whole listing small
+keywordstyle=\color{blue}\bfseries,
+stringstyle=\ttfamily\color{red}, % typewriter type for strings
+commentstyle=\color{Green},
+basicstyle=\linespread{.99}\ttfamily\scriptsize,
+captionpos=b,
+breaklines=true,
+frame=single,
+xleftmargin=10pt,
+showstringspaces=true}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% for question environment
+\NewEnviron{qu}{
+\begin{itemize}
+	\refstepcounter{quc}
+	\item[ \fbox{سؤال \thequc} ] \BODY
+\end{itemize}
+}
