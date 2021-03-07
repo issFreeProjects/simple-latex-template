@@ -1,0 +1,55 @@
+\newcommand{\mktitle}{%
+	تمرین سری $\infty$
+}
+\newcommand{\myname}{%
+	نام 
+}
+\newcommand{\mystdID}{%
+	شماره دانشجویی
+}
+\newcommand{\institudeName}{%
+دانشگاه صنعتی شریف
+}
+\newcommand{\departmentName}{%
+دانشکدهٔ علوم ریاضی
+}
+\newcommand{\type}{%
+	تمرین
+}
+\newcommand{\semester}{%
+نیم‌سال دوم تحصیلی 00$-$1399
+}
+
+
+\settextfont{XB Niloofar}
+\setdigitfont{Yas}
+\setlatintextfont[]{Amiri}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% for code env
+\definecolor{listinggray}{gray}{.92}
+\lstset{% general command to set parameter(s)
+language=Matlab,
+backgroundcolor=\color{listinggray},
+basicstyle=\ttfamily, % print whole listing small
+keywordstyle=\color{blue}\bfseries,
+stringstyle=\ttfamily\color{red}, % typewriter type for strings
+commentstyle=\color{Green},
+basicstyle=\linespread{.99}\ttfamily\scriptsize,
+captionpos=b,
+breaklines=true,
+frame=single,
+xleftmargin=10pt,
+showstringspaces=true}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% for question environment
+\NewEnviron{qu}{
+\begin{itemize}
+	\refstepcounter{quc}
+	\item[ \fbox{ﺱﺅﺎﻟ \thequc} ] \BODY
+\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% title and author
+\title{}
+\author{ ﻥﺎﻣ ﻥﻮﯿﺴﻧﺪﻫ }
+\date{\vspace{-5ex}}
+\newcounter{quc}
