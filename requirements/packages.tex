@@ -11,6 +11,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% xepersian package and setting it's font
 \usepackage{xepersian}                                                  %%
 \settextfont{Yas}                                                       %%
+\ExplSyntaxOn                                                           %%
+\cs_set_eq:NN                                                           %%
+\etex_iffontchar:D                                                      %%
+\tex_iffontchar:D                                                       %%
+\cs_undefine:N \c_one                                                   %%
+\int_const:Nn \c_one { 1 }                                              %%
+\ExplSyntaxOff                                                          %%
 \setdigitfont{Yas}                                                      %%
 \setlatintextfont{C059}                                                 %%
 \linespread{1.5}                                                        %% setting distance between lines = 1.5
